@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="600" viewBox="0 0 400 600">
+  <rect width="100%" height="100%" fill="#071024"/>
+  <rect x="16" y="16" width="368" height="568" rx="12" fill="#0b1220" stroke="#ff6b6b" stroke-width="6"/>
+  <text x="50%" y="48%" font-size="30" fill="#ff6b6b" text-anchor="middle" font-family="Arial">Interstellar</text>
+  <text x="50%" y="58%" font-size="16" fill="#ffdce0" text-anchor="middle">(2014)</text>
+</svg>
