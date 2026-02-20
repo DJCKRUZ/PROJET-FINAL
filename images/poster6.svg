@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="600" viewBox="0 0 400 600">
+  <defs>
+    <linearGradient id="g6" x1="0" x2="1">
+      <stop offset="0" stop-color="#0b1220"/>
+      <stop offset="1" stop-color="#f97316"/>
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="#070913"/>
+  <rect x="14" y="14" width="372" height="572" rx="12" fill="url(#g6)"/>
+  <text x="50%" y="45%" font-size="30" fill="#fff" text-anchor="middle" font-family="Arial">Pulp Fiction</text>
+  <text x="50%" y="55%" font-size="14" fill="#ffe8cc" text-anchor="middle">(1994)</text>
+</svg>
