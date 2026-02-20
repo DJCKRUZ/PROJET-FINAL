@@ -1,31 +1,45 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
     <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Explorateur de Films</title>
-    <link rel="stylesheet" href="css/style.css">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Explorateur de Films — mini application pour rechercher et afficher des films">
+        <title>CinéExplorer — Explorateur de Films</title>
+        <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
         <header class="site-header">
-            <h1>Explorateur de Films</h1>
-            <div class="search-row">
-                <input id="searchInput" placeholder="Rechercher un film (ex: Inception, Matrix)...">
-                <button id="searchBtn">Rechercher</button>
+            <div class="brand">
+                <div class="logo">🎬</div>
+                <div>
+                    <h1>CinéExplorer</h1>
+                    <p class="tag">Découvrez et explorez vos films préférés</p>
+                </div>
             </div>
+
+            <nav class="filters">
+                <button class="filter-btn" data-genre="all">Tous</button>
+                <button class="filter-btn" data-genre="Action">Action</button>
+                <button class="filter-btn" data-genre="Drama">Drame</button>
+                <button class="filter-btn" data-genre="Comedy">Comédie</button>
+                <button class="filter-btn" data-genre="Sci-Fi">Science-Fiction</button>
+            </nav>
         </header>
 
-        <main>
-            <section id="hero">
-                <h2>Films populaires (exemples locaux)</h2>
-            </section>
+        <section class="search-area">
+            <div class="search-box">
+                <input id="searchInput" placeholder="Rechercher un film...">
+                <button id="searchBtn">🔎 Rechercher</button>
+            </div>
+        </section>
 
-            <section id="moviesGrid" class="grid"></section>
+        <main>
+            <section id="moviesGrid" class="grid" aria-live="polite"></section>
         </main>
 
-        <div id="modal" class="modal hidden">
+        <div id="modal" class="modal hidden" role="dialog" aria-modal="true">
             <div class="modal-content">
-                <button id="closeModal" class="close">✕</button>
+                <button id="closeModal" class="close" aria-label="Fermer">✕</button>
                 <div id="modalBody"></div>
             </div>
         </div>

@@ -1,29 +1,47 @@
 :root{
-  --bg:#0f1724;
-  --card:#0b1220;
-  --accent:#ff6b6b;
+  --bg:#0b1020;
+  --card:#0f1724;
+  --card-2:#0b1220;
+  --accent-1:#7c3aed; /* purple */
+  --accent-2:#6ee7b7; /* mint */
+  --accent-cta:linear-gradient(90deg,var(--accent-1),#9f7aea);
   --text:#e6eef8;
+  --muted:rgba(230,238,248,0.65);
 }
 *{box-sizing:border-box}
-body{margin:0;font-family:Inter, system-ui, Arial, sans-serif;background:linear-gradient(180deg,#071026 0%, #0b1630 100%);color:var(--text);min-height:100vh}
-.site-header{padding:20px 24px;display:flex;align-items:center;justify-content:space-between;gap:12px}
-.site-header h1{margin:0;font-size:20px}
-.search-row{display:flex;gap:8px}
-#searchInput{padding:8px 12px;border-radius:8px;border:1px solid rgba(255,255,255,0.06);background:rgba(255,255,255,0.02);color:var(--text);min-width:260px}
-#searchBtn{padding:8px 12px;border-radius:8px;border:none;background:var(--accent);color:#fff;cursor:pointer}
-main{padding:20px 24px}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:18px}
-.card{background:var(--card);border-radius:10px;overflow:hidden;box-shadow:0 6px 18px rgba(2,6,23,0.6);transition:transform .14s}
-.card:hover{transform:translateY(-6px)}
-.poster{width:100%;height:270px;object-fit:cover;background:#09101a;display:block}
-.card-body{padding:12px}
-.title{font-weight:700;margin:0 0 6px 0;font-size:14px}
-.meta{font-size:12px;color:rgba(230,238,248,0.75)}
+body{margin:0;font-family:Inter, system-ui, Arial, sans-serif;background:var(--bg);color:var(--text);min-height:100vh}
+.site-header{padding:20px 28px;display:flex;align-items:center;justify-content:space-between;gap:18px;background:linear-gradient(90deg,#6d28d9,#8b5cf6);color:#fff}
+.brand{display:flex;gap:12px;align-items:center}
+.logo{font-size:28px}
+.brand h1{margin:0;font-size:20px}
+.tag{margin:0;font-size:12px;opacity:0.9}
+.filters{display:flex;gap:10px}
+.filter-btn{background:rgba(255,255,255,0.08);border:none;color:#fff;padding:8px 12px;border-radius:10px;cursor:pointer}
+.filter-btn.active{background:rgba(255,255,255,0.14);box-shadow:0 6px 18px rgba(0,0,0,0.25)}
+.search-area{padding:22px 28px;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent)}
+.search-box{max-width:900px;margin:0 auto;display:flex;gap:10px}
+#searchInput{flex:1;padding:14px 16px;border-radius:12px;border:1px solid rgba(255,255,255,0.04);background:rgba(255,255,255,0.02);color:var(--text);font-size:15px}
+#searchBtn{padding:12px 16px;border-radius:12px;border:none;background:var(--accent-cta);color:#fff;cursor:pointer}
+main{padding:24px 28px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:22px}
+.card{background:var(--card-2);border-radius:12px;overflow:hidden;box-shadow:0 8px 24px rgba(2,6,23,0.6);transition:transform .18s}
+.card:hover{transform:translateY(-8px)}
+.poster{width:100%;height:320px;object-fit:cover;background:#09101a;display:block}
+.card-body{padding:14px}
+.title{font-weight:700;margin:0 0 8px 0;font-size:16px}
+.meta{font-size:13px;color:var(--muted);display:flex;justify-content:space-between;align-items:center}
+.badge{background:rgba(255,255,255,0.06);padding:6px 8px;border-radius:8px;font-size:12px}
+.rating{color:#ffd166;font-weight:700}
 .site-footer{text-align:center;padding:18px 12px;font-size:13px;color:rgba(230,238,248,0.6)}
 .modal{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(2,6,23,0.6);z-index:40}
 .hidden{display:none}
-.modal-content{background:var(--card);padding:18px;border-radius:10px;max-width:880px;width:94%;color:var(--text)}
-.close{position:absolute;right:18px;top:18px;background:transparent;border:none;color:var(--text);font-size:18px;cursor:pointer}
-.modal-poster{float:left;margin-right:14px;width:160px;border-radius:6px}
+.modal-content{position:relative;background:var(--card);padding:20px;border-radius:12px;max-width:880px;width:94%;color:var(--text)}
+.close{position:absolute;right:14px;top:10px;background:transparent;border:none;color:var(--text);font-size:20px;cursor:pointer}
+.modal-poster{float:left;margin-right:16px;width:180px;border-radius:8px}
 .modal h3{margin-top:0}
-@media(max-width:600px){.poster{height:220px}.modal-poster{float:none;display:block;margin:0 auto 12px;width:70%}}
+@media(max-width:720px){
+  .poster{height:220px}
+  .grid{grid-template-columns:repeat(auto-fill,minmax(160px,1fr))}
+  .modal-poster{float:none;display:block;margin:0 auto 12px;width:70%}
+}
+
